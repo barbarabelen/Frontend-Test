@@ -1,20 +1,74 @@
+@font-face {
+	font-family: 'klavika';
+	src: url('font/klavika-bold-webfont.woff') format('woff');
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'klavika';
+	src: url('font/klavika-regular-webfont.woff') format('woff');
+	font-weight: normal;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-/*#container {
-    overflow: hidden;
-}
-*/
-
-#slider {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    animation: slide 30s infinite;
+body {
+	background: #222831;
+	color: white;
+	line-height: 1.5;
 }
 
-figure {
-    position: relative;
+h1 {
+	font-family: 'klavika';
+	font-weight: bold;
+}
+
+p {
+	font-family: 'klavika';
+	font-weight: normal;
+}
+
+.container {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	width: 100%;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.slide.current {
+	opacity: 1;
+}
+
+/* images */
+.slide:first-child {
+	background: url('../images/bg-1.jpg') no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+	background: url('../images/bg-2.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(3) {
+	background: url('../images/bg-3.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(4) {
+	background: url('../images/bg-4.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(5) {
+	background: url('../images/bg-5.jpg') no-repeat center top/cover;
+}
+.slide:nth-child(6) {
+	background: url('../images/bg-6.jpg') no-repeat center top/cover;
 }
